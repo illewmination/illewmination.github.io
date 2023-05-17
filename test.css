@@ -1,0 +1,298 @@
+.image-with-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-with-text-l {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.image-with-text img {
+    max-width: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.image-with-text-l img {
+    max-width: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #000000;
+}
+.text-overlay-art {
+    position: absolute;
+    top: 50%;
+    left: 54.5%;
+    transform: translate(0%, 0%);
+    text-align: left;
+    color: #000000;
+}
+.thesis-image-container {
+    position: relative;
+    margin-top: 2rem;
+    margin-right: 10px;
+    margin-left: 300px;
+}
+
+.thesis-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #000000;
+}
+
+.thesis-image-container-v {
+    position: relative;
+    margin-top: 1rem;
+    margin-right: 15px;
+    margin-left: 50px;
+}
+.thesis-image-container-v-exp {
+    position: relative;
+    margin-top: 1rem;
+    margin-right: 15px;
+    margin-left: 50px;
+}
+    .thesis-image-container-v-exp img {
+        max-width: 50%;
+        margin-right: 20px;
+        margin-left: -30px;
+    }
+
+.thesis-image-container-v-exp2 {
+    position: relative;
+    margin-top: 1rem;
+    margin-right: 15px;
+    margin-left: 50px;
+}
+
+    .thesis-image-container-v-exp2 img {
+        max-width: 50%;
+        margin-right: 20px;
+        margin-left: -50px;
+    }
+.thesis-text-overlay-v {
+    position: absolute;
+    top: 0%;
+    left: 20%;
+    right: 25%;
+    transform: translate(40%, 0%);
+    text-align: left;
+    color: #000000;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+    z-index: 1;
+}
+
+body {
+    margin-top: 5rem; 
+}
+
+.science-body {
+    padding: 100px;
+}
+
+.science-body-2 {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.container {
+    padding-left: 200px;
+    padding-right: 200px; 
+}
+.sm_container {
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+
+.tab-container {
+    padding-left: 200px; 
+    padding-right: 200px; 
+}
+
+.tab-container-v {
+    padding-left: 100px; 
+    padding-right: 100px; 
+}
+.tab-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-buttons-v {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.tab-button-v {
+    border: none;
+    background: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: Bahnschrift;
+}
+
+    .tab-button-v:hover {
+        background-image: linear-gradient(#E9DEC8, white);
+    }
+
+    .tab-button-v.active {
+        background-image: linear-gradient(#D3BC8E, white);
+        color: #786C58;
+    }
+
+
+.tab-button {
+    border: none;
+    background: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: Bahnschrift;
+}
+    .tab-button:hover {
+        background-image: linear-gradient(to right, #E9DEC8, white);
+    }
+    .tab-button.active {
+        background-image: linear-gradient(to right, #D3BC8E, white);
+        color: #786C58;
+    }
+
+.tab-pane {
+    display: none;
+}
+
+    .tab-pane.active {
+        display: block;
+    }
+
+.panel-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 20px;
+}
+
+.panel {
+    flex: 1;
+    padding: 20px;
+}
+.panel-b {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+
+* {
+    box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 600px;
+    position: relative;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+/* Caption text */
+.text {
+    color: #000000; 
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 220px;
+    width: 100%;
+    text-align: left;
+    transform: translate(100%,0%)
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+    .dot.active, .dot:hover {
+        background-color: #717171;
+    }
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}

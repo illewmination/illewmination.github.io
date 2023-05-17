@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Andrew J. Lew's Science page</title>
+    <style>
+        body {
+            font-family: Bahnschrift;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="test.css">
+</head>
+
+<header>
+    <nav>
+        <ul>
+            <div class="image-with-text">
+                <img src="about/Personal_Logo.png" width="70">
+                <p>
+                    Andrew J. Lew&nbsp;&nbsp;
+                    <a href="About.html">About</a>&nbsp;&nbsp;
+                    <a href="Science.html">Science</a>&nbsp;&nbsp;
+                    <a href="Art.html">Art</a>&nbsp;&nbsp;
+                </p>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="tab-container">
+        <div class="tab-buttons">
+            <button class="tab-button-v active" data-tab="tab1">Visual Art</button>
+            <button class="tab-button-v" data-tab="tab2">Auditory Art</button>
+        </div>
+
+        <div class="tab-content">
+            <div id="tab1" class="tab-pane active">
+                <div style="text-align:center;">
+                    <p>
+                        <i>
+                            “Each person sees their own hands countless times a day. But ask someone to draw a hand from memory,
+                            <br>and you’ll realize many people have never truly understood its form…”
+                            <br>
+                        </i>
+                    </p>
+                </div>
+
+                <!-- for landscapes -->
+
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <!--<div class="numbertext">1 / 7</div>-->
+                        <img src="art/l_1.png" width="600">
+                        <!--<div class="text">Caption Text</div>-->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <!--<div class="numbertext">2 / 7</div>-->
+                        <img src="art/l_2.png" style="width:100%">
+                        <!--<div class="text">Caption Text</div>-->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <!--<div class="numbertext">3 / 7</div>-->
+                        <img src="art/l_3.png" style="width:100%">
+                        <!--<div class="text">Caption Text</div>-->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <!--<div class="numbertext">4 / 7</div>-->
+                        <img src="art/l_4.png" width="600">
+                        <!--<div class="text">Caption Text</div>-->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <!--<div class="numbertext">5 / 7</div>-->
+                        <img src="art/l_5.png" style="width:100%">
+                        <!--<div class="text">Caption Text</div>-->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <!--<div class="numbertext">6 / 7</div>-->
+                        <img src="art/l_6.png" style="width:100%">
+                        <!--<div class="text">Caption Text</div>-->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <!--<div class="numbertext">7 / 7</div>-->
+                        <img src="art/l_7.png" style="width:100%">
+                        <!--<div class="text">Caption Text</div>-->
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+
+                </div>
+                <br>
+
+                <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides");
+                        let dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) { slideIndex = 1 }
+                        if (n < 1) { slideIndex = slides.length }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex - 1].style.display = "block";
+                        dots[slideIndex - 1].className += " active";
+
+                    }
+
+                </script>
+
+                <div class="text-overlay-art">
+                    <p>
+                        Landscape Paintings<br><br>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                        <span class="dot" onclick="currentSlide(7)"></span>
+                    </p>
+                </div>
+
+                <!-- for ap portfolio -->
+                <div class="image-with-text-l">
+                    <br>
+                    <video src="art/AP Art Slide Show Andrew.mp4" controls width="600">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="sm_container">
+                        <p>
+                            AP Studio Art Portfolio
+                            <br><br>Concentration: Dissolving the barrier between "Nature" and "Technology"
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div id="tab2" class="tab-pane ">
+                <div style="text-align:center;">
+                    <p>
+                        <i>
+                            "A universal language of the human condition; independently and invariably,
+                            <br>every culture that has existed has found value in structures of auditory stimulation”
+                            <br><br><br>
+                        </i>
+                    </p>
+                </div>
+
+                <div class="image-with-text-l">
+                    <br>
+                    <video src="art/Driver's License Cover Inside Car - Flute Clarinet Piano.mp4" controls width="600">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="sm_container">
+                        <p>
+                            Wyman, S.P., Eusufzai, M., Lew, A.J.
+                            <br>Driver's License
+                            <br><a href="https://www.youtube.com/watch?v=FBYrGk4tTMU">Flute Piano Clarinet Cover</a>
+                        </p>
+                    </div>
+                </div>
+                <br><br><br>
+                <div class="image-with-text-l">
+                    <br>
+                    <video src="art/Peaches x Young Wild and Free Mashup - Flute, Clarinet, Guitar.mp4" controls width="600">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="sm_container">
+                        <p>
+                            Eusufzai, M., Lew, A.J., Wyman, S.P.,
+                            <br>Peaches x Young Wild and Free, Mashup
+                            <br><a href="https://www.youtube.com/watch?v=O4xnnyriBBY">Guitar Clarinet Flute Arrangement</a>
+                        </p>
+                    </div>
+                </div>
+                <br><br><br>
+                <div class="image-with-text-l">
+                    <br>
+                    <video src="art/th_piano.mp4" controls width="600">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="sm_container">
+                        <p>
+                            Lew, A.J.
+                            <br>Septette for the Dead Princess
+                            <br>Piano Cover
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const tabButtons = document.querySelectorAll('.tab-button-v');
+            const tabContent = document.querySelectorAll('.tab-pane');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tab = button.dataset.tab;
+
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContent.forEach(content => content.classList.remove('active'));
+
+                    button.classList.add('active');
+                    document.getElementById(tab).classList.add('active');
+                });
+            });
+        </script>
+    </div>
+    <br><br><br><br>
+</body>
+</html>
