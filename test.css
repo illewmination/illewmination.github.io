@@ -18,7 +18,11 @@
     margin-right: 20px;
     margin-left: 20px;
 }
-
+.image-with-text-l video {
+    max-width: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
 .image-container {
     position: relative;
 }
