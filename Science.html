@@ -8,6 +8,35 @@
         body {
             font-family: Bahnschrift;
         }
+        /* Descending numbering for publications */
+        .science-body-2.publications {
+            counter-reset: pub 23;
+        }
+        .science-body-2.publications .image-with-text-l {
+            counter-increment: pub -1;
+            position: relative;
+        }
+        .science-body-2.publications .image-with-text-l::before {
+            content: counter(pub) ". ";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 6px;
+        }
+        /* Make publication images square with buffer space */
+        .image-with-text-l img {
+            width: 250px;
+            height: 250px;
+            object-fit: contain;
+            padding: 12px;
+            background: #ffffff;
+            box-sizing: border-box;
+            display: block;
+            margin: 0 auto 8px auto;
+        }
+        /* Simple numbering style for presentations when using ol[reversed] */
+        ol.reversed-presentations {
+            margin-left: 1rem;
+        }
     </style>
     <link rel="stylesheet" type="text/css" href="test.css">
 </head>
@@ -55,8 +84,8 @@
                     <button class="tab-button" data-tab="tab2">&nbsp;&nbsp;&nbsp;Nanomaterial Synthesis </button>
                     <button class="tab-button" data-tab="tab3">&nbsp;&nbsp;&nbsp;Molecular Simulation&nbsp;&nbsp;</button>
                     <button class="tab-button" data-tab="tab4">&nbsp;&nbsp;&nbsp;AI-Enhanced Design&nbsp;&nbsp;&nbsp;</button>
-                    <button class="tab-button" data-tab="tab1"><a href="#List of Publications">List of Publications</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                    <button class="tab-button" data-tab="tab1"><a href="#List of Presentations">List of Presentations</a>&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <button class="tab-button" data-tab="tabPubs">List of Publications</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <button class="tab-button" data-tab="tabPres">List of Presentations</a>&nbsp;&nbsp;&nbsp;&nbsp;</button>
                 </div>
             </div>
 
@@ -185,6 +214,356 @@
                     </div>
                 </div>
 
+                <div id="tabPubs" class="tab-pane">
+                    <div class="science-body-2">
+                        <section>
+                            <h1>List of Publications</h1>
+                            <div class="science-body-2 publications">
+                                <p>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_LLM-Benchmark.png" width="250">
+                                        <p>
+                                            Lew, A.J., Cao, Y., Buehler, M.J.
+                                            <br> ProjectionBench: Evaluating Scientific Hypothesis Generation in LLMs Under Progressive Information Disclosure.
+                                            <br> arXiv. (2026). <a href="https://doi.org/10.48550/arXiv.2605.30284 ">https://doi.org/10.48550/arXiv.2605.30284 </a>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_Image_TRACC2.jpg" width="250">
+                                        <p>
+                                            Sundberg, R., Corlies, P., Lew, A.J., Brewer, E., Perkins, T.
+                                            <br> Accurately simulating spectral remote sensing scenes for machine learning applications.
+                                            <br> SPIE Artificial Intelligence and Image and Signal Processing for Remote Sensing XXXI. (2025). <a href="https://doi.org/10.1117/12.3062431">https://doi.org/10.1117/12.3062431</a>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_Image_SSKITLS.jpg" width="250">
+                                        <p>
+                                            Brewer, E., Lew, A.J., Perkins, T., Corlies, P., Stelter, D., Sundberg, R.
+                                            <br> Tracking radiometrically accurate synthetic moving ground vehicles from time-offset satellite-image bands.
+                                            <br> SPIE Applications of Machine Learning. (2025). <a href="https://doi.org/10.1117/12.3063228">https://doi.org/10.1117/12.3063228</a>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_Image_TRACC.jpg" width="250">
+                                        <p>
+                                            Lew, A.J., Sundberg, R.
+                                            <br> Investigation of Image Spatial Resolution in the Detection of Elephants Using Residual Attention-Enhanced Convolutional Classification in Simulated Satellite Imagery.                                            
+                                            <br> IEEE International Geoscience and Remote Sensing Symposium. (2025). <a href="https://doi.org/10.1109/IGARSS55030.2025.11243430">https://doi.org/10.1109/IGARSS55030.2025.11243430</a>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_Image_Target.png" width="250">
+                                        <p>
+                                            Lew, A.J., Perkins, T., Brewer, E., Corlies, P., Sundberg, R. 
+                                            <br> Physics-Informed Gaussian-Enforced Separated-Band Convolutional Conversion Network for Moving Object Satellite Image Conversion.
+                                            <br> Geomatics. (2025). <a href="https://doi.org/10.3390/geomatics5030035">https://doi.org/10.3390/geomatics5030035</a>
+                                            <br>
+                                            <br><b><i>Invited Featured Paper</i></b>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_Image_Conversion.png" width="250">
+                                        <p>
+                                            Lew, A.J., Brewer, E., Perkins, T., Corlies, P., Grassi, J., Marks, J., Friedman, A., Jeong, L., Sundberg, R.
+                                            <br> Enhancing cross-sensor data integration through domain conversion of satellite imagery with hyperparameter optimized machine learning. 
+                                            <br> SPIE Defense + Commercial Sensing. (2025). <a href="https://doi.org/10.1117/12.3049424">https://doi.org/10.1117/12.3049424</a>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>                                 
+                                    <div class="image-with-text-l">
+                                        <video src="publication images/S_LLM_RL-Cookie.mp4" width="250" controls autoplay muted loop>
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        <p>
+                                            Lew, A.J.
+                                            <br> Accelerating Materials Recipe Acquisition via LLM-Mediated Reinforcement Learning.
+                                            <br> MRS Advances. (2025). <a href="https://doi.org/10.1557/s43580-025-01143-9">https://doi.org/10.1557/s43580-025-01143-9</a>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_ML-Solubility.png" width="250">
+                                        <p>
+                                            Lew, A.J.
+                                            <br> A Brief Survey of ML Methods Predicting Molecular Solubility: Towards Lighter Models via Attention and Hyperparameter Optimization
+                                            <br> Preprints. (2024). <a href="https://doi.org/10.20944/preprints202409.0849.v1">https://doi.org/10.20944/preprints202409.0849.v1</a>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>  
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_Review-Biopolymer.png" width="250">
+                                        <p>
+                                            Lew, A.J., Lai, A.F., Wyman, S.P.
+                                            <br> Biopolymeric additive manufacturing: The bidirectional interplay of synthetic and natural systems                                            
+                                            <br> Preprints. (2024). <a href="https://doi.org/10.20944/preprints202403.0657.v1">https://doi.org/10.20944/preprints202403.0657.v1</a>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>   
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_ML-Hardness.png" width="250">
+                                        <p>
+                                            Lew, A.J., Stifler, C.A., Cantamessa, A., Tits, A., Ruffoni, D., Gilbert, P.U.P.A., Buehler, M.J.
+                                            <br> Deep learning virtual indenter maps nanoscale hardness rapidly and non-destructively, revealing mechanism and enhancing bioinspired design.
+                                            <br> Matter. (2023). <a href="https://doi.org/10.1016/j.matt.2023.03.031">https://doi.org/10.1016/j.matt.2023.03.031</a>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_MD-Fracture.png" width="250">
+                                        <p>
+                                            Lew, A.J., Stifler, C.A., Tits, A., Schmidt, C.A., Scholl, A., Cantamessa, A., Müller, L., Delaunois, Y., Compère, P., Ruffoni, D., Buehler, M.J., Gilbert, P.U.P.A.
+                                            <br> A Molecular Scale Understanding of Misorientation Toughening in Corals and Seashells.
+                                            <br> Advanced Materials. 2300373 (2023). <a href="https://doi.org/10.1002/adma.202300373">https://doi.org/10.1002/adma.202300373</a>
+                                            <br>
+                                            <br> <b><i><a href="https://www.biomat.uliege.be/cms/c_10428076/en/the-surprising-properties-of-biominerals">University of Liège News Feature</a></i>
+                                            <br> <i><a href="https://twitter.com/MITMechE/status/1643977765350445058">MIT Mechanical Engineering Feature</a></i>
+                                            <br> <i><a href="https://twitter.com/AdvSciNews/status/1653353908595556352?cxt=HHwWgIC8nden8vEtAAAA">Advanced Science News Feature</a></i>
+                                            <br> <i><a href="https://www.youtube.com/watch?v=VJrxhH7-1eI">Video Abstract</a></i></b>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_ML-Honeycomb_Diffusion.png" width="250">
+                                        <p>
+                                            Lew, A.J., Buehler, M.J.
+                                            <br> Single-shot forward and inverse hierarchical architected materials design for nonlinear mechanical properties using an attention-diffusion model.
+                                            <br> Materials Today. 64, 10-20 (2023). <a href="https://doi.org/10.1016/j.mattod.2023.03.007">https://doi.org/10.1016/j.mattod.2023.03.007</a>
+                                            <br>
+                                            <br><b><i>Materials Today Highlighted Paper</i></b>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_ML-Honeycomb.png" width="250">
+                                        <p>
+                                            Lew, A.J., Jin, K., Buehler, M.J.
+                                            <br> Designing Architected Materials for Mechanical Compression via Simulation, Deep Learning, and Experimentation
+                                            <br> Nature Partner Journal Computational Materials. 9, 80 (2023). <a href="https://doi.org/10.1038/s41524-023-01036-1">https://doi.org/10.1038/s41524-023-01036-1</a>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_Review-Fracture.png" width="250">
+                                        <p>
+                                            Ni, B., Steinbach, D., Yang, Z., Lew, A.J., Zhang, B., Fang, Q., Buehler, M.J., Lou, J.
+                                            <br> Fracture at the Two-Dimensional Limit.
+                                            <br> MRS Bulletin. 47, 848–862 (2022). <a href="https://doi.org/10.1557/s43577-022-00385-4">https://doi.org/10.1557/s43577-022-00385-4</a>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_MD-Heal.png" width="250">
+                                        <p>
+                                            Lew, A.J., Beniash, E., Gilbert, P.U.P.A., Buehler, M.J.
+                                            <br> Role of the Mineral in the Self-Healing of Cracks in Human Enamel.
+                                            <br> ACS Nano. 16, 7, 10273–10280 (2022). <a href="https://doi.org/10.1021/acsnano.1c10407">https://doi.org/10.1021/acsnano.1c10407</a>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_ML-Buckle.png" width="250">
+                                        <p>
+                                            Lew, A.J., Buehler, M.J.
+                                            <br> DeepBuckle: Extracting physical behavior directly from empirical observation for a material agnostic approach to analyze and predict buckling.
+                                            <br> Journal of the Mechanics and Physics of Solids. 164, 104909 (2022). <a href="https://doi.org/10.1016/j.jmps.2022.104909">https://doi.org/10.1016/j.jmps.2022.104909</a>
+                                            <br>
+                                            <br> <b><i><a href="https://patents.google.com/patent/US20250284954A1/en">U.S. Patent Application No. 18/858183. Filed February 21, 2023.</a></i></b>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_ML-Fracture_Design.png" width="250">
+                                        <p>
+                                            Lew, A.J., Buehler, M.J.
+                                            <br> A deep learning augmented genetic algorithm approach to polycrystalline 2D material fracture discovery and design.
+                                            <br> Applied Physics Reviews. 8, 041414 (2021). <a href="https://doi.org/10.1063/5.0057162">https://doi.org/10.1063/5.0057162</a>
+                                            <br>
+                                            <br> <b><i>Applied Physics Reviews Featured Article</i></b>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_ML-Compliance.png" width="250">
+                                        <p>
+                                            Lew, A.J., Buehler, M.J.
+                                            <br> Encoding and exploring latent design space of optimal material structures via a VAE-LSTM Model.
+                                            <br> Forces in Mechanics. 5, 100054 (2021). <a href="https://doi.org/10.1016/j.finmec.2021.100054">https://doi.org/10.1016/j.finmec.2021.100054</a>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_ML-Fracture.png" width="250">
+                                        <p>
+                                            Lew, A.J., Yu, CH., Hsu, YC., Buehler, M.J.
+                                            <br> Deep learning model to predict fracture mechanisms of graphene.
+                                            <br> Nature Partner Journal 2D Materials Applications. 5, 48 (2021). <a href="https://doi.org/10.1038/s41699-021-00228-x">https://doi.org/10.1038/s41699-021-00228-x</a>
+                                            <br>
+                                            <br> <b><i><a href="https://cee.mit.edu/new-research-examines-the-fracture-mechanisms-of-graphene/">MIT News Feature</a></i></b>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_Exp-Flexible.png" width="250">
+                                        <p>
+                                            Lew, A.J., Kaser, S.J., Kim, DY, Christoff-Tempesta, T., Cho, Y., Ortony, J.H.
+                                            <br> Effects of molecular flexibility and head group repulsion on aramid amphiphile self-assembly.
+                                            <br> Molecular Systems Design & Engineering. 6, 1016-1024 (2021). <a href="https://doi.org/10.1039/D1ME00120E">https://doi.org/10.1039/d1me00120e</a>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_Exp-Platform.png" width="250">
+                                        <p>
+                                            Christoff-Tempesta, T., Cho, Y., Kim, DY. Geri, M., Guillaume, L., Lew, A.J., Zuo, X., Lindemann, W.R., Ortony, J.H.
+                                            <br> Self-assembly of aramid amphiphiles into ultra-stable nanoribbons and aligned nanoribbon threads.
+                                            <br> Nature Nanotechnology. 16, 447–454 (2021). <a href="https://doi.org/10.1038/s41565-020-00840-w">https://doi.org/10.1038/s41565-020-00840-w</a>
+                                            <br>
+                                            <br> <b><i><a href="https://patents.google.com/patent/US20200298194A1/en">U.S. Patent Application No. 16/825724. Filed March 20, 2020.</a></i></b>
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="image-with-text-l">
+                                        <img src="publication images/S_Review-Gels.png" width="250">
+                                        <p>
+                                            Lew, A.J., Christoff-Tempesta, T., Ortony, J.H.
+                                            <br> Beyond Covalent Crosslinks: Applications of Supramolecular Gels.
+                                            <br> Gels. 4, 40 (2018). <a href="https://doi.org/10.3390/gels4020040">https://doi.org/10.3390/gels4020040</a>
+
+                                        </p>
+                                    </div>
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div id="tabPres" class="tab-pane">
+                    <div class="science-body-2">
+                        <section>
+                            <h1>List of Presentations</h1>
+                            <div class="science-body-2">
+                                <ol class="reversed-presentations" reversed start="15">
+                                    <li>
+                                        Lew, A.J., Sundberg, R.<br>
+                                        Investigation of Image Spatial Resolution in the Detection of Elephants Using Residual Attention-Enhanced Convolutional Classification in Simulated Satellite Imagery<br>
+                                        IEEE International Geoscience and Remote Sensing Symposium, Brisbane. Poster #THP1.PA.12 (2025).
+                                    <br><br>
+                                    </li>
+                                    <li>
+                                        Lew, A.J., Brewer, E., Perkins, T., Corlies, P., Grassi, J., Marks, J., Friedman, A., Jeong, L., Sundberg, R.<br>
+                                        Enhancing cross-sensor data integration through domain conversion of satellite imagery with hyperparameter optimized machine learning<br>
+                                        SPIE Defense + Commercial Sensing, Orlando. Talk #13455-16 (2025).
+                                    <br><br>
+                                    </li>
+                                    <li>
+                                        Lew, A.J.<br>
+                                        Accelerating Materials Recipe Acquisition via LLM-Mediated Reinforcement Learning<br>
+                                        MRS Fall Meeting and Exhibit, Boston. Talk #MT04.03.04 (2024).
+                                    <br><br>
+                                    </li>
+                                    <li>
+                                        Lew, A.J.<br>
+                                        Elucidating Structure-Property Relationships for Targeted Materials Mechanical Design<br>
+                                        MIT Public Thesis Defense, Cambridge. Talk (2022).
+                                    <br><br>
+                                    </li>
+                                    <li>
+                                        Lew, A.J., Buehler, M.J.<br>
+                                        Leveraging Deep Learning Models to Expedite and Expand the Exploration of Material Structures for Mechanical Design.<br>
+                                        10th International Conference on Multiscale Materials Modeling, Baltimore. Talk #2011619 (2022).
+                                    <br><br>
+                                    </li>
+                                    <li>
+                                        Lew, A.J., Gilbert, P.U.P.A., Buehler, M.J.<br>
+                                        Non-destructive Hardness Prediction via Deep Learning Image Regression Models.<br>
+                                        MRS Spring Meeting and Exhibit, Virtual. Poster #SF12.11.06 (2022). <br><b><i>Outstanding Contribution</i></b>
+                                    <br><br>
+                                    </li>
+                                    <li>
+                                        Lew, A.J., Buehler, M.J.<br>
+                                        A Deep Learning Augmented Genetic Algorithm Approach for 2D Fracture Discovery and Design.<br>
+                                        MRS Fall Meeting and Exhibit, Boston. Talk #DS03.03.04 (2021).
+                                    <br><br>
+                                    </li>
+                                    <li>
+                                        Lew, A.J., Buehler, M.J.<br>
+                                        Cutting Through Failure by Traversing Across Disciplines: Leveraging Traditional Mechanics, Deep Learning, and Genetic Algorithms to Predict Fracture and Design Material Structure.<br>
+                                        MIT Chemistry Student Seminar, Cambridge. Talk #10 (2021).
+                                    <br><br>
+                                    </li>
+                                    <li>
+                                        Lew, A.J., Buehler, M.J.<br>
+                                        Using Deep Learning to Predict Fracture: Analysis, Design, and Additive Manufacturing.<br>
+                                        16th US National Congress on Computational Mechanics, Virtual. Talk #21721056 (2021). <br><b><i>Keynote Address</i></b>
+                                    <br><br>
+                                    </li>
+                                    <li>
+                                        Lew, A.J., Kim, DY, Ortony, J.H.<br>
+                                        From Molecules to Macroscale: Self-assembly of Robust Hierarchically Ordered Materials.<br>
+                                        MIT WIC/CADI Poster Symposium, Cambridge. Poster (2019).
+                                    <br><br>
+                                    </li>
+                                    <li>
+                                        Lew, A.J., Machness, A., Goorsky, M.<br>
+                                        Synthesis and Characterization of Superparamagnetic Iron Oxide Nanoparticles for Magnetic Hyperthermia Applications.<br>
+                                        UCLA Undergraduate Research Week, Los Angeles. Poster #557 (2017). <br><b><i>Vice Provost's Poster Recognition Award</i></b>
+                                    <br><br>
+                                    </li>
+                                    <li>
+                                        Lew, A.J., Lieng, J., Tran, V., Wolfman, J.<br>
+                                        I Beam Glass Fiber.<br>
+                                        SAMPE Conference and Exhibition, Seattle. Poster Category D (2017).
+                                    <br><br>
+                                    </li>
+                                    <li>
+                                        Lang, A., Cruz, A., Reyes, A., Lew, A.J., Sulian, A., Lara, A., Del Signore, C., Kotcherha, C., Webber, D., Babiker, H., Wu, J., Cho, K., Matsui, K., Johnson, L., Conde, L., Gutierrez, N., Saepoo, S., Slavin, S., Akiyama, T.<br>
+                                        Microelectronics: Micro-design, Mega-impact.<br>
+                                        Northrop Grumman Intern Showcase: Explore Space, Redondo Beach. Poster (2016). <br><b><i>Best Overall Presentation Award</i></b>
+                                    <br><br>
+                                    </li>
+                                    <li>
+                                        Lew, A.J., Timmons, J., Lieng, J., Figueroa, J., Chu, K.<br>
+                                        Square Beam Glass Fiber.<br>
+                                        SAMPE Conference and Exhibition, Long Beach. Poster Category E (2016).
+                                    <br><br>
+                                    </li>
+                                    <li>
+                                        Lew, A.J., Machness, A., Goorsky, M.<br>
+                                        Synthesis and Characterization of Superparamagnetic Iron Oxide Nanoparticles with Varying Precursor Addition Rate.<br>
+                                        ACS Southern California Undergraduate Research Conference, Long Beach. Poster #42 (2016). <br><b><i>Outstanding Poster Award</i></b>
+                                    <br><br>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -207,240 +586,5 @@
         });
     </script>
 
-    <!---------------------------------------->
-
-    <div class="science-body-2">
-        <section id="List of Publications">
-            <h1><br><br><br><br>List of Publications</h1>
-            <div class="science-body-2">
-                <p>
-                    <div class="image-with-text-l">
-                        <video src="publication images/LLM_RL-Cookie.mp4" width="250" controls autoplay muted loop>
-                            Your browser does not support the video tag.
-                        </video>
-                        <p>
-                            Lew, A.J.
-                            <br> Accelerating Materials Recipe Acquisition via LLM-Mediated Reinforcement Learning.
-                            <br> MRS Advances. (2025). <a href="https://doi.org/10.1557/s43580-025-01143-9">https://doi.org/10.1557/s43580-025-01143-9</a>
-                            <br>
-                        </p>
-                    </div>
-                    <br>
-                    <div class="image-with-text-l">
-                        <img src="publication images/S_ML-Hardness.png" width="250">
-                        <p>
-                            Lew, A.J., Stifler, C.A., Cantamessa, A., Tits, A., Ruffoni, D., Gilbert, P.U.P.A., Buehler, M.J.
-                            <br> Deep learning virtual indenter maps nanoscale hardness rapidly and non-destructively, revealing mechanism and enhancing bioinspired design.
-                            <br> Matter. (2023). <a href="https://doi.org/10.1016/j.matt.2023.03.031">https://doi.org/10.1016/j.matt.2023.03.031</a>
-                            <br>
-                        </p>
-                    </div>
-                    <br>
-                    <div class="image-with-text-l">
-                        <img src="publication images/S_MD-Fracture.png" width="250">
-                        <p>
-                            Lew, A.J., Stifler, C.A., Tits, A., Schmidt, C.A., Scholl, A., Cantamessa, A., Müller, L., Delaunois, Y., Compère, P., Ruffoni, D., Buehler, M.J., Gilbert, P.U.P.A.
-                            <br> A Molecular Scale Understanding of Misorientation Toughening in Corals and Seashells.
-                            <br> Advanced Materials. 2300373 (2023). <a href="https://doi.org/10.1002/adma.202300373">https://doi.org/10.1002/adma.202300373</a>
-                            <br>
-                            <br> <b><i><a href="https://www.biomat.uliege.be/cms/c_10428076/en/the-surprising-properties-of-biominerals">University of Liège News Feature</a></i>
-                            <br> <i><a href="https://twitter.com/MITMechE/status/1643977765350445058">MIT Mechanical Engineering Feature</a></i>
-                            <br> <i><a href="https://twitter.com/AdvSciNews/status/1653353908595556352?cxt=HHwWgIC8nden8vEtAAAA">Advanced Science News Feature</a></i>
-                            <br> <i><a href="https://www.youtube.com/watch?v=VJrxhH7-1eI">Video Abstract</a></i></b>
-                            <br>
-                        </p>
-                    </div>
-                    <br>
-                    <div class="image-with-text-l">
-                        <img src="publication images/S_ML-Honeycomb_Diffusion.png" width="250">
-                        <p>
-                            Lew, A.J., Buehler, M.J.
-                            <br> Single-shot forward and inverse hierarchical architected materials design for nonlinear mechanical properties using an attention-diffusion model.
-                            <br> Materials Today. 64, 10-20 (2023). <a href="https://doi.org/10.1016/j.mattod.2023.03.007">https://doi.org/10.1016/j.mattod.2023.03.007</a>
-                            <br>
-                            <br><b><i>Materials Today Highlighted Paper</i></b>
-                        </p>
-                    </div>
-                    <br>
-                    <div class="image-with-text-l">
-                        <img src="publication images/S_ML-Honeycomb.png" width="250">
-                        <p>
-                            Lew, A.J., Jin, K., Buehler, M.J.
-                            <br> Designing Architected Materials for Mechanical Compression via Simulation, Deep Learning, and Experimentation
-                            <br> Nature Partner Journal Computational Materials. 9, 80 (2023). <a href="https://doi.org/10.1038/s41524-023-01036-1">https://doi.org/10.1038/s41524-023-01036-1</a>
-                            <br>
-                        </p>
-                    </div>
-                    <br>
-                    <div class="image-with-text-l">
-                        <img src="publication images/S_Review-Fracture.png" width="250">
-                        <p>
-                            Ni, B., Steinbach, D., Yang, Z., Lew, A.J., Zhang, B., Fang, Q., Buehler, M.J., Lou, J.
-                            <br> Fracture at the Two-Dimensional Limit.
-                            <br> MRS Bulletin. 47, 848–862 (2022). <a href="https://doi.org/10.1557/s43577-022-00385-4">https://doi.org/10.1557/s43577-022-00385-4</a>
-                            <br>
-                        </p>
-                    </div>
-                    <br>
-                    <div class="image-with-text-l">
-                        <img src="publication images/S_MD-Heal.png" width="250">
-                        <p>
-                            Lew, A.J., Beniash, E., Gilbert, P.U.P.A., Buehler, M.J.
-                            <br> Role of the Mineral in the Self-Healing of Cracks in Human Enamel.
-                            <br> ACS Nano. 16, 7, 10273–10280 (2022). <a href="https://doi.org/10.1021/acsnano.1c10407">https://doi.org/10.1021/acsnano.1c10407</a>
-                            <br>
-                        </p>
-                    </div>
-                    <br>
-                    <div class="image-with-text-l">
-                        <img src="publication images/S_ML-Buckle.png" width="250">
-                        <p>
-                            Lew, A.J., Buehler, M.J.
-                            <br> DeepBuckle: Extracting physical behavior directly from empirical observation for a material agnostic approach to analyze and predict buckling.
-                            <br> Journal of the Mechanics and Physics of Solids. 164, 104909 (2022). <a href="https://doi.org/10.1016/j.jmps.2022.104909">https://doi.org/10.1016/j.jmps.2022.104909</a>
-                            <br>
-                            <br> <b><i>U.S. Provisional Patent Application No. 63/333493. Filed April 21, 2022.</i></b>
-                            <br>
-                        </p>
-                    </div>
-                    <br>
-                    <div class="image-with-text-l">
-                        <img src="publication images/S_ML-Fracture_Design.png" width="250">
-                        <p>
-                            Lew, A.J., Buehler, M.J.
-                            <br> A deep learning augmented genetic algorithm approach to polycrystalline 2D material fracture discovery and design.
-                            <br> Applied Physics Reviews. 8, 041414 (2021). <a href="https://doi.org/10.1063/5.0057162">https://doi.org/10.1063/5.0057162</a>
-                            <br>
-                            <br> <b><i>Applied Physics Reviews Featured Article</i></b>
-                            <br>
-                        </p>
-                    </div>
-                    <br>
-                    <div class="image-with-text-l">
-                        <img src="publication images/S_ML-Compliance.png" width="250">
-                        <p>
-                            Lew, A.J., Buehler, M.J.
-                            <br> Encoding and exploring latent design space of optimal material structures via a VAE-LSTM Model.
-                            <br> Forces in Mechanics. 5, 100054 (2021). <a href="https://doi.org/10.1016/j.finmec.2021.100054">https://doi.org/10.1016/j.finmec.2021.100054</a>
-                            <br>
-                        </p>
-                    </div>
-                    <br>
-                    <div class="image-with-text-l">
-                        <img src="publication images/S_ML-Fracture.png" width="250">
-                        <p>
-                            Lew, A.J., Yu, CH., Hsu, YC., Buehler, M.J.
-                            <br> Deep learning model to predict fracture mechanisms of graphene.
-                            <br> Nature Partner Journal 2D Materials Applications. 5, 48 (2021). <a href="https://doi.org/10.1038/s41699-021-00228-x">https://doi.org/10.1038/s41699-021-00228-x</a>
-                            <br>
-                            <br> <b><i><a href="https://cee.mit.edu/new-research-examines-the-fracture-mechanisms-of-graphene/">MIT News Feature</a></i></b>
-                            <br>
-                        </p>
-                    </div>
-                    <br>
-                    <div class="image-with-text-l">
-                        <img src="publication images/S_Exp-Flexible.png" width="250">
-                        <p>
-                            Lew, A.J., Kaser, S.J., Kim, DY, Christoff-Tempesta, T., Cho, Y., Ortony, J.H.
-                            <br> Effects of molecular flexibility and head group repulsion on aramid amphiphile self-assembly.
-                            <br> Molecular Systems Design & Engineering. 6, 1016-1024 (2021). <a href="https://doi.org/10.1039/D1ME00120E">https://doi.org/10.1039/d1me00120e</a>
-                            <br>
-                        </p>
-                    </div>
-                    <br>
-                    <div class="image-with-text-l">
-                        <img src="publication images/S_Exp-Platform.png" width="250">
-                        <p>
-                            Christoff-Tempesta, T., Cho, Y., Kim, DY. Geri, M., Guillaume, L., Lew, A.J., Zuo, X., Lindemann, W.R., Ortony, J.H.
-                            <br> Self-assembly of aramid amphiphiles into ultra-stable nanoribbons and aligned nanoribbon threads.
-                            <br> Nature Nanotechnology. 16, 447–454 (2021). <a href="https://doi.org/10.1038/s41565-020-00840-w">https://doi.org/10.1038/s41565-020-00840-w</a>
-                            <br>
-                            <br> <b><i>U.S. Patent Application No. 16/825724. Filed September 24, 2020.</i></b>
-                            <br>
-                        </p>
-                    </div>
-                    <br>
-                    <div class="image-with-text-l">
-                        <img src="publication images/S_Review-Gels.png" width="250">
-                        <p>
-                            Lew, A.J., Christoff-Tempesta, T., Ortony, J.H.
-                            <br> Beyond Covalent Crosslinks: Applications of Supramolecular Gels.
-                            <br> Gels. 4, 40 (2018). <a href="https://doi.org/10.3390/gels4020040">https://doi.org/10.3390/gels4020040</a>
-
-                        </p>
-                    </div>
-        </section>
-        <section id="List of Presentations">
-            <h1><br><br><br><br>List of Presentations</h1>
-            <div class="science-body-2">
-                <p>
-                    <br> Lew, A.J., Sundberg, R.
-                    <br> Investigation of Image Spatial Resolution in the Detection of Elephants Using Residual Attention-Enhanced Convolutional Classification in Simulated Satellite Imagery
-                    <br> IEEE International Geoscience and Remote Sensing Symposium, Brisbane. Poster #THP1.PA.12 (2025). 
-                    <br>
-                    <br> Lew, A.J., Brewer, E., Perkins, T., Corlies, P., Grassi, J., Marks, J., Friedman, A., Jeong, L., Sundberg, R. 
-                    <br> Enhancing cross-sensor data integration through domain conversion of satellite imagery with hyperparameter optimized machine learning
-                    <br> SPIE Defense + Commercial Sensing, Orlando. Talk (2025). 
-                    <br>
-                    <br> Lew, A.J.
-                    <br> Accelerating Materials Recipe Acquisition via LLM-Mediated Reinforcement Learning
-                    <br> MRS Fall Meeting and Exhibit, Boston. Talk #MT04.03.04 (2024). 
-                    <br>
-                    <br> Lew, A.J.
-                    <br> Elucidating Structure-Property Relationships for Targeted Materials Mechanical Design
-                    <br> MIT Public Thesis Defense, Cambridge. Talk (2022).
-                    <br>
-                    <br> Lew, A.J., Buehler, M.J.
-                    <br> Leveraging Deep Learning Models to Expedite and Expand the Exploration of Material Structures for Mechanical Design.
-                    <br> 10th International Conference on Multiscale Materials Modeling, Baltimore. Talk #2011619 (2022).
-                    <br>
-                    <br> Lew, A.J., Gilbert, P.U.P.A., Buehler, M.J.
-                    <br> Non-destructive Hardness Prediction via Deep Learning Image Regression Models.
-                    <br> MRS Spring Meeting and Exhibit, Virtual. Poster #SF12.11.06 (2022).
-                    <br> <b><i>Outstanding Contribution</i></b>
-                    <br>
-                    <br> Lew, A.J., Buehler, M.J.
-                    <br> A Deep Learning Augmented Genetic Algorithm Approach for 2D Fracture Discovery and Design.
-                    <br> MRS Fall Meeting and Exhibit, Boston. Talk #DS03.03.04 (2021).
-                    <br>
-                    <br> Lew, A.J., Buehler, M.J.
-                    <br> Cutting Through Failure by Traversing Across Disciplines: Leveraging Traditional Mechanics, Deep Learning, and Genetic Algorithms to Predict Fracture and Design Material Structure.
-                    <br> MIT Chemistry Student Seminar, Cambridge. Talk #10 (2021).
-                    <br>
-                    <br> Lew, A.J., Buehler, M.J.
-                    <br> Using Deep Learning to Predict Fracture: Analysis, Design, and Additive Manufacturing.
-                    <br> 16th US National Congress on Computational Mechanics, Virtual. Talk #21721056 (2021).
-                    <br> <b><i>Keynote Address</i></b>
-                    <br>
-                    <br> Lew, A.J., Kim, DY, Ortony, J.H.
-                    <br> From Molecules to Macroscale: Self-assembly of Robust Hierarchically Ordered Materials.
-                    <br> MIT WIC/CADI Poster Symposium, Cambridge. Poster (2019).
-                    <br>
-                    <br> Lew, A.J., Machness, A., Goorsky, M.
-                    <br> Synthesis and Characterization of Superparamagnetic Iron Oxide Nanoparticles for Magnetic Hyperthermia Applications.
-                    <br> UCLA Undergraduate Research Week, Los Angeles. Poster #557 (2017).
-                    <br> <b><i>Vice Provost's Poster Recognition Award</i></b>
-                    <br>
-                    <br> Lew, A.J., Lieng, J., Tran, V., Wolfman, J.
-                    <br> I Beam Glass Fiber.
-                    <br> SAMPE Conference and Exhibition, Seattle. Poster Category D (2017).
-                    <br>
-                    <br> Lang, A., Cruz, A., Reyes, A., Lew, A.J., Sulian, A., Lara, A., Del Signore, C., Kotcherha, C., Webber, D., Babiker, H., Wu, J., Cho, K., Matsui, K., Johnson, L., Conde, L., Gutierrez, N., Saepoo, S., Slavin, S., Akiyama, T.
-                    <br> Microelectronics: Micro-design, Mega-impact.
-                    <br> Northrop Grumman Intern Showcase: Explore Space, Redondo Beach. Poster (2016).
-                    <br> <b><i>Best Overall Presentation Award</i></b>
-                    <br>
-                    <br> Lew, A.J., Timmons, J., Lieng, J., Figueroa, J., Chu, K.
-                    <br> Square Beam Glass Fiber.
-                    <br> SAMPE Conference and Exhibition, Long Beach. Poster Category E (2016).
-                    <br>
-                    <br> Lew, A.J., Machness, A., Goorsky, M.
-                    <br> Synthesis and Characterization of Superparamagnetic Iron Oxide Nanoparticles with Varying Precursor Addition Rate.
-                    <br> ACS Southern California Undergraduate Research Conference, Long Beach. Poster #42 (2016).
-                    <br> <b><i>Outstanding Poster Award</i></b>
-                    <br><br><br><br>
-                </p>
-            </div>
-        </section>
 </body>
 </html>
