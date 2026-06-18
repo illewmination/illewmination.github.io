@@ -63,39 +63,39 @@
 .thesis-image-container-v {
     position: relative;
     margin-top: 1rem;
-    margin-right: 15px;
-    margin-left: 50px;
+    /* margin-right: 15px; */
+    /* margin-left: 50px; */
 }
 .thesis-image-container-v-exp {
     position: relative;
     margin-top: 1rem;
-    margin-right: 15px;
-    margin-left: 50px;
+    /* margin-right: 15px; */
+    /* margin-left: 50px; */
 }
     .thesis-image-container-v-exp img {
         max-width: 50%;
-        margin-right: 20px;
-        margin-left: -30px;
+        /* margin-right: 20px; */
+        /* margin-left: -30px; */
     }
 
 .thesis-image-container-v-exp2 {
     position: relative;
     margin-top: 1rem;
-    margin-right: 15px;
-    margin-left: 50px;
+    /* margin-right: 15px; */
+    /* margin-left: 50px; */
 }
 
     .thesis-image-container-v-exp2 img {
         max-width: 50%;
-        margin-right: 20px;
-        margin-left: -50px;
+        /* margin-right: 20px; */
+        /* margin-left: -50px; */
     }
 .thesis-text-overlay-v {
-    position: absolute;
-    top: 0%;
-    left: 20%;
-    right: 25%;
-    transform: translate(40%, 0%);
+    position: relative;
+    /* top: 0%; */
+    left: 5%;
+    /* right: 25%; */
+    /* transform: translate(40%, 0%); */
     text-align: left;
     color: #000000;
 }
@@ -114,12 +114,8 @@ body {
 }
 
 .science-body {
-    padding: 100px;
-}
-
-.science-body-2 {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .container {
@@ -131,20 +127,14 @@ body {
     padding-right: 20px; 
 }
 
-.tab-container {
-    padding-left: 200px; 
-    padding-right: 200px; 
-}
-
 .tab-container-v {
-    padding-left: 100px; 
     padding-right: 100px; 
 }
-.tab-buttons {
+/* .tab-buttons {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .tab-buttons-v {
     display: block;
@@ -220,6 +210,11 @@ body {
 .slideshow-container {
     max-width: 600px;
     position: relative;
+}
+
+/* Ensure left tab panel has a usable minimum width when anchored */
+.tab-container-v .panel-b {
+    min-width: 240px;
 }
 
 /* Next & previous buttons */
